@@ -29,6 +29,9 @@ int main(void){
     head = reverse_list(head);
     print_list(head);
 
+    head = swap_pairs(head);
+    print_list(head);
+
     return 0;
 }
 
@@ -65,5 +68,13 @@ Node* reverse_list(Node* head){
 }
 
 Node* swap_pairs(Node* head){
-
+    if(!head || !head->next){ 
+        return head;
+    } else {
+        Node* first = head;
+        Node* second = head->next;
+        first->next = swap_pairs(second->next);
+        second->next = first;
+        return second;
+    }
 }
