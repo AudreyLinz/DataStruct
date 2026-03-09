@@ -5,39 +5,30 @@
 #include <string>
 
 int main(void) {
-    BST<double> tree;
-
-    //20, 10, 30, 5, 15, 25, 35, 12, 18
+    BST<int> tree;
     tree.insert(20);
-    tree.insert(10);
-    tree.insert(30);
-    tree.insert(5);
-    tree.insert(15);
-    tree.insert(25);
-    tree.insert(35);
+    tree.insert(1);
+    tree.insert(23);
+    tree.insert(22);
+    tree.insert(24);
+    tree.insert(26);
+    tree.insert(27);
+    tree.insert(28);
+    tree.insert(29);
+    tree.insert(19);
     tree.insert(12);
-    tree.insert(18);
 
     tree.print();
-    /*
+    
+    std::cout << "QUIZ ACCESS CODE: ";
+    std::cout << tree.getBalance(tree.search(23));
+    std::cout << tree.getHeight(tree.search(20));    
+    tree.balance();
+    std::cout << tree.getBalance(tree.search(23));
+    std::cout << tree.getHeight(tree.search(20));
+    std::cout << std::endl;
+    
     tree.print();
-    tree.rotateValRight(10);
-    tree.print();
-    tree.rotateValLeft(5);
-    tree.print();
-    */
-    /*
-    tree.print();
-    tree.deleteNode(2);
-    tree.deleteNode(3);
-
-    tree.print();
-    tree.deleteAll();
-    tree.print();
-    */
-
 
     return 0;
 }
-
-

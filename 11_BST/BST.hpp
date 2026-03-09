@@ -37,8 +37,12 @@ public:
 
     void rotateRight(BTNode<T>* & node);
     void rotateValRight(const T& val);
+
     void rotateLeft(BTNode<T>* & node);
     void rotateValLeft(const T& val);
+    void rotateLeftDoubleRef(BTNode<T>*& node);
+    void rotateRightDoubleRef(BTNode<T>*& node); // TODO
+    void balance();
 
 private:
     BTNode<T>* root;
@@ -48,6 +52,7 @@ private:
     void deleteAll(BTNode<T>* node);
     void print(const std::string& prefix, BTNode<T>* node, bool isRight) const;
     void deleteNodeWithTwoChild(BTNode<T>* node);
+    void balance(BTNode<T>*& node);
 };
 
 #endif

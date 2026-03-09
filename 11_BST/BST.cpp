@@ -334,3 +334,59 @@ void BST<T>::rotateValLeft(const T& val) {
         rotateLeft(parent->right); // Corrected
     }
 }
+
+template <typename T>
+void BST<T>::balance() {
+    balance(root);
+}
+
+template <typename T>
+void BST<T>::balance(BTNode<T>*& node) {
+    if (!node) return;
+
+    // 1. Recursively balance subtrees first (Bottom-up approach)
+    balance(node->left);
+    balance(node->right);
+
+    // 2. Calculate balance factor
+    int bf = getBalance(node);
+
+    // 3. Left-Heavy Cases
+    if (bf > 1) { 
+        if (getBalance(node->left) >= 0) {
+            rotateRight(node);
+        } else {
+            rotateLeft(node->left); 
+            rotateRight(node);    
+        }
+    }
+    // 4. Right-Heavy Cases
+    else if (bf < -1) { 
+        if (getBalance(node->right) <= 0) {
+            // Case 3: Right-Right (RR) -> Single Left Rotation
+            rotateLeft(node);
+        } else {
+            // Case 4: Right-Left (RL) -> Double Rotation
+            rotateRight(node->right); // Rotate child right
+            rotateLeft(node);         // Rotate node left
+        }
+    }
+}
+
+template <typename T>
+void BST<T>::rotateLeftDoubleRef(BTNode<T>*& node) {
+    if (!node || !node->right) {
+        return;
+    }
+    rotateRightRef(node->right);
+    rotateLeftRef(node);
+}
+
+template <typename T>
+void BST<T>::rotateRightDoubleRef(BTNode<T>*& node) {
+    if (!node || !node->left) {
+        return;
+    }
+    rotateRightRef(node->left);
+    rotateLeftRef(node);
+}
