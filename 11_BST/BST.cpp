@@ -277,7 +277,7 @@ int BST<T>::getBalance(BTNode<T>* node) const{
     }
     return getHeight(node->left) - getHeight(node->right);
 }
-
+/*
 template<typename T>
 void BST<T>::rotateRight(BTNode<T>* & node){
     if(!node || !node->left){
@@ -389,4 +389,39 @@ void BST<T>::rotateRightDoubleRef(BTNode<T>*& node) {
     }
     rotateRightRef(node->left);
     rotateLeftRef(node);
+}
+    */
+
+template <typename T>
+void BST<T>::postorder() const {
+    std::cout << "Postorder: [ ";
+    postorder(root);
+    std::cout << "]\n";
+}
+
+template <typename T>
+void BST<T>::postorder(BTNode<T>* node) const {
+    if (!node) {
+        return;
+    }
+    postorder(node->left);
+    postorder(node->right);
+    std::cout << node->data << ' ';
+}
+
+template <typename T>
+void BST<T>::preorder() const {
+    std::cout << "Preorder: [ ";
+    preorder(root);
+    std::cout << "]\n";
+}
+
+template <typename T>
+void BST<T>::preorder(BTNode<T>* node) const {
+    if (!node) {
+        return;
+    }
+    std::cout << node->data << ' ';
+    preorder(node->left);
+    preorder(node->right);
 }

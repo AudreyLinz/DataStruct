@@ -47,6 +47,8 @@ public:
 private:
     BTNode<T>* root;
     void inorder(BTNode<T>* node) const;
+    void preorder(BTNode<T>* node) const;
+    void postorder(BTNode<T>* node) const;
     bool isFullTree(BTNode<T>* node) const;
     BTNode<T>* insert_recursive(BTNode<T>* node, const T& val);
     void deleteAll(BTNode<T>* node);
