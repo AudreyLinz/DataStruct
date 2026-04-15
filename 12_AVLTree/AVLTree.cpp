@@ -77,6 +77,7 @@ return node;
 }
 return getMinNode(node->left);
 }
+
 template <typename T>
 void AVLTree<T>::deleteLeaf(AVLNode<T>* child, AVLNode<T>* parent) {
 if (!child) {

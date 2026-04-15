@@ -16,7 +16,15 @@ void heapSort(std::vector<T>& v){
 int main(void){
     minHeap<int> heap;
     std::vector<int> v;
+    heap.insert(15);
+    heap.insert(11);
+    heap.insert(18);
+    heap.insert(9);
+    heap.insert(1);
+    heap.print();
 
+
+    /*
     for(int i = 0; i<10; i++){
         int num = rand()%1000;
         heap.insert(num);
@@ -35,6 +43,6 @@ int main(void){
         heap.print();
         std::cout << "----------- \n";
     }
-
+    */
     return 0;
 }

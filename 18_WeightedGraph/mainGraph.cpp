@@ -13,7 +13,7 @@ int main(void){
     knowledge.insertVertex("G");
     knowledge.insertVertex("S");
     knowledge.insertVertex("H");
-
+    /*
     knowledge.insertEdge("B", "A");
     knowledge.insertEdge("A", "S");
     knowledge.insertEdge("C", "S");
@@ -24,7 +24,7 @@ int main(void){
     knowledge.insertEdge("E", "H");
     knowledge.insertEdge("G", "H");
     knowledge.insertEdge("G", "F");
-
+    */
     knowledge.print();
     knowledge.DFS();
 

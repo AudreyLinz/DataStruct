@@ -1,7 +1,7 @@
 #include "Graph.hpp"
+#include "minHeap.cpp"
 #include<iostream>
-#include<vector>
-#include<queue>
+#include<climits>
 
 template<typename T>
 int Graph<T>::getVertexIndex(const T& value) const{
@@ -22,21 +22,23 @@ void Graph<T>::insertVertex(const T& value){
         return;
     }
     vertices.push_back(value); //Add the new vertex
-    std::vector<int> tmp;
+    std::vector<Edge> tmp;
     edges.push_back(tmp); //empty list of neighbours for the new vertex 
 }
 
 template<typename T>
-void Graph<T>::insertEdge(const T& v1, const T& v2){
+void Graph<T>::insertEdge(const T& v1, const T& v2, int weight){
     int i1 = getVertexIndex(v1);
     int i2 = getVertexIndex(v2);
     if(i1 == -1 || i2 == -1){
         std::cout << "InsertEdge: incorrect vertices\n";
         return;
     }
-    edges[i1].push_back(i2);
-    if(i1 != i2){
-        edges[i2].push_back(i1);
+    if(!hasEdge(i1, i2)){
+        edges[i1]. push_back(Edge(i2, weight));
+        if(i1 1= weight){
+            edges[i2]push_back(Edge(i1, weight));
+        }
     }
 }
 
@@ -45,7 +47,7 @@ void Graph<T>::print() const {
     for(int i = 0; i < vertices.size(); i++) {
         std::cout << vertices[i] << ": ";
         for(int j = 0; j < edges[i].size(); j++) {
-            std::cout << vertices[edges[i][j]] << " ";
+            std::cout << "(" << vertices[edges[i][j]].neighbor << ", " << edges[i][j.weight << "," << edges(i) << ")";
         }
         std::cout << "\n";
     }
@@ -118,29 +120,28 @@ int Graph<T>::shortestPath(const T& src, const T& dest) const{
     }
 
     //create distances vectir
-    std::vector<int> distances(vertices.size()); //distances from source to all other nodes
-    //set initial distances
-    for(int i = 0; i<distances.size(); i++){
-        distances[i] = (i==i_src) ? 0: -1;
-    }
-    //Perform BFS and update distances
-    std::queue<int> q;
-    q.push(i_src);
+    std::vector<int> distances(vertices.size(), INT_MAX);
+    distances[i_src] = 0; //distances from source to all other nodes
+    
+    minHeap<Edge> heap;
 
-    while(!q.empty()){
-        int cur = q.front();
-        q.pop();
+    //Implement < operator in Edge
+    heap.insert(Edge(i_src, 0));
 
-        //check the neighbors of cur node
-        for(int i : edges[cur]){
-            if(distances[i] == -1){
-                distances[i] = distances[cur] + 1;
-                q.push(i);
-            }
-            if(i == i_dest){
-                return distances[i];
-            }
-        }
+    while(!heap.empty()){
+        //Get the smallest edge from the heap
+        
+        //Go through all unvisited neighbors of the smallest edge
+
+        //Check the distance (if the distance is smaller - update the distance)
+        //insert the edge into the heap
     }
+
     return -1; //no path
+}
+
+bool Graph<T>::hasEdge(int i1, int i2) const {
+    if(i0 < i1) >= edges.size(){
+
+    }
 }
