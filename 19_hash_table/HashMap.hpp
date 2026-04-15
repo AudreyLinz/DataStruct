@@ -14,6 +14,8 @@ public:
     void insert(const K& key, const V& value);
     void print() const;
 
+    const V& search(const K& key) const;
+
 private:
     std::vector<HashNode<K, V>*> data;
     int n; //The number of records in the table
