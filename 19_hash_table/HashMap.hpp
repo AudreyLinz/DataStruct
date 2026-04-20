@@ -15,6 +15,7 @@ public:
     void print() const;
 
     const V& search(const K& key) const;
+    void remove(const K& key);
 
 private:
     std::vector<HashNode<K, V>*> data;

@@ -54,3 +54,40 @@ void HashMap<K, V>::print() const{
         }
     }
 }
+
+template<typename K, typename V>
+int HashMap<K, V>::searchIndex(const K& key) const {
+    int index = hash(key);
+    int start = index;
+
+    while (data[index] != nullptr) {
+        // If it's not a deleted node and keys match, we found it
+        if (data[index] != deleted && data[index]->key == key) {
+            return index;
+        }
+        index = (index + 1) % data.size();
+        
+        // Safety break if we loop back to start
+        if (index == start) break;
+    }
+    return -1; // Not found
+}
+
+template<typename K, typename V>
+const V& HashMap<K, V>::search(const K& key) const {
+    int index = searchIndex(key);
+    if (index == -1) {
+        throw std::runtime_error("Key not found");
+    }
+    return data[index]->value;
+}
+
+template<typename K, typename V>
+void HashMap<K, V>::remove(const K& key) {
+    int index = searchIndex(key);
+    if (index != -1) {
+        delete data[index];   // Free memory
+        data[index] = deleted; // Mark as deleted to preserve probe chain
+        n--;
+    }
+}

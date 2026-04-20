@@ -1,0 +1,290 @@
+INSERT INTO(VEND_NAME, VEND_PHONE, VEND_WEBSITE, VEND_CONTACT_NAME)
+VALUES
+    ('Staples', '555-0102', 'www.staples.com', 'Sarah Jenkins'),
+    ('InkCo', '555-9483', 'www.InkCo.net', 'Evan Tostado'),
+    ('TechNova Inc.', '555-3321', 'www.technova.io', 'Matt Wiley'),
+    ('HP Inc.', '800-474-6836', 'www.hp.com', 'Imaging Support'),
+    ('3M Office Products', '888-364-3577', 'www.3m.com', 'John Miller'),
+    ('Logitech Global', '510-795-8500', 'www.logitech.com', 'Sarah Chen'),
+    ('Georgia-Pacific', '404-652-4000', 'www.gp.com', 'Robert White'),
+    ('Fellowes Brands', '800-955-0959', 'www.fellowes.com', 'Jessica Moore'),
+    ('Bic Corporation', '203-783-2000', 'www.us.bic.com', 'Marketing Dept'),
+    ('Serta Simmons Bedding', '877-399-9397', 'www.serta.com', 'Office Furniture Div'),
+    ('Sanford L.P.', '800-346-3278', 'www.sharpie.com', 'Retail Supply'),
+    ('Keurig Dr Pepper', '800-361-5628', 'www.keurig.com', 'Commercial Accounts'),
+    ('Hon Furniture', '800-833-3964', 'www.hon.com', 'Inventory Manager'),
+    ('Epson America', '800-463-7766', 'www.epson.com', 'Print Supply Div'),
+    ('MeadWestvaco (ACCO)', '800-541-0094', 'www.acco.com', 'Notebook Logistics'),
+    ('Brother International', '877-276-8437', 'www.brother-usa.com', 'Hardware Sales'),
+    ('Crayola LLC', '800-272-9652', 'www.crayola.com', 'Education Dept'),
+    ('Otter Products (OtterBox)', '855-688-7269', 'www.otterbox.com', 'Mobile Accessories'),
+    ('Clorox Professional', '800-227-1860', 'www.cloroxpro.com', 'Janitorial Sales'),
+    ('Nestle Professional', '800-288-8682', 'www.nestleprofessional.us', 'Snack Supply'),
+    ('Rubbermaid Commercial', '800-347-9800', 'www.rubbermaidcommercial.com', 'Storage Solutions'),
+    ('Western Digital', '800-275-4932', 'www.westerndigital.com', 'Storage Dept'),
+    ('Avery Dennison', '800-462-8379', 'www.avery.com', 'Label Division'),
+    ('Zebra Technologies', '877-275-9327', 'www.zebra.com', 'Scanning Systems'),
+    ('Belkin International', '800-223-5546', 'www.belkin.com', 'Power & Cables'),
+    ('Kensington Computer', '800-535-4242', 'www.kensington.com', 'Security Products'),
+    ('Duracell Inc.', '800-551-2355', 'www.duracell.com', 'Battery Supply'),
+    ('Casio America', '800-706-2534', 'www.casio.com', 'Electronics Div'),
+    ('Five Star (ACCO Brands)', '800-356-4123', 'www.fivestarbuilt.com', 'Student Gear'),
+    ('Domtar Paper', '800-636-6827', 'www.domtar.com', 'Mill Logistics');
+
+INSERT INTO(PROD_NAME, PROD_DESCRIPTION, PROD_TYPE, PROD_PRICE, VENDOR_ID)
+VALUES
+    ('LaserJet Pro M404n', 'Monochrome laser printer with networking', 'Tech', 219.99, 1),
+    ('Envy 6055i All-in-One', 'Wireless color inkjet printer', 'Tech', 159.99, 1),
+    ('MX Master 3S Mouse', 'Wireless ergonomic high-precision mouse', 'Tech', 99.99, 3),
+    ('C920s HD Pro Webcam', '1080p video with privacy shutter', 'Tech', 69.99, 3),
+    ('WorkSmart Keyboard', 'Quiet-touch membrane keyboard', 'Tech', 29.99, 3),
+    ('EcoTank ET-2800', 'Cartridge-free supertank color printer', 'Tech', 279.99, 11),
+    ('HL-L2350DW Printer', 'Compact laser printer with duplex printing', 'Tech', 149.99, 13),
+    ('WD Blue 2TB HDD', 'Internal SATA hard drive for desktops', 'Tech', 64.99, 19),
+    ('My Passport 5TB', 'Portable external hard drive USB 3.0', 'Tech', 119.99, 19),
+    ('Post-it Notes 12-Pack', '3x3 inch canary yellow sticky notes', 'Supplies', 15.49, 2),
+    ('Avery 5160 Labels', 'Address labels for laser printers 3000pk', 'Supplies', 28.99, 20),
+    ('Sharpie Permanent Markers', 'Black fine point, 12 count', 'Supplies', 10.99, 8),
+    ('Bic Cristal Pens', 'Blue ballpoint pens, medium point 24ct', 'Supplies', 5.99, 6),
+    ('Crayola 64-Count Crayons', 'Classic crayons with built-in sharpener', 'Supplies', 4.50, 14),
+    ('Five Star 5-Subject Notebook', 'College ruled spiral notebook', 'Supplies', 8.99, 26),
+    ('Highlighter Assorted 5pk', 'Chisel tip fluorescent colors', 'Supplies', 4.25, 8),
+    ('Copy Paper 10-Ream Case', '8.5 x 11 letter size 20lb paper', 'Paper', 54.99, 4),
+    ('HammerMill Premium Paper', 'High brightness inkjet paper ream', 'Paper', 9.99, 27),
+    ('Brights Colored Paper', 'Assorted neon colors 500 sheets', 'Paper', 14.50, 4),
+    ('Serta Jennings Chair', 'Big and tall executive office chair', 'Furniture', 349.99, 7),
+    ('Hon Exposure Task Chair', 'Mesh back ergonomic swivel chair', 'Furniture', 229.00, 10),
+    ('Fellowes Powershred 99Ci', 'Cross-cut heavy duty paper shredder', 'Furniture', 299.99, 5),
+    ('Metal 2-Drawer File Cabinet', 'Vertical letter-size filing storage', 'Furniture', 115.00, 10),
+    ('Keurig K-2500', 'Commercial grade single serve brewer', 'Breakroom', 289.99, 9),
+    ('K-Cup Variety Pack 40ct', 'Assorted coffee and tea pods', 'Breakroom', 24.99, 9),
+    ('Clorox Disinfecting Wipes', 'Fresh scent cleaning wipes 3pk', 'Facility', 12.99, 16),
+    ('Pure Life Water 24pk', '0.5 liter purified bottled water', 'Breakroom', 6.99, 17),
+    ('Duracell AA Batteries', 'Coppertop alkaline batteries 16ct', 'Facility', 18.49, 24),
+    ('Duracell 9V Battery', 'Single 9 volt battery for alarms', 'Facility', 4.99, 24),
+    ('Rubbermaid Trash Can', 'Slim Jim 23 gallon waste container', 'Facility', 45.00, 18);
+INSERT INTO INVENTORY (PROD_ID, STOCK_AMOUNT, REORDER_LEVEL)
+VALUES 
+    (1, 45, 10),  -- LaserJet Pro
+    (2, 12, 15),  -- Envy Printer (Low Stock!)
+    (3, 85, 20),  -- MX Master Mouse
+    (4, 30, 10),  -- Webcam
+    (5, 110, 25), -- Keyboard
+    (6, 8, 10),   -- EcoTank (Below Reorder Level)
+    (7, 22, 5),   -- HL-L2350DW
+    (8, 60, 15),  -- WD Blue HDD
+    (9, 40, 10),  -- My Passport
+    (10, 500, 100), -- Post-it Notes
+    (11, 250, 50),  -- Avery Labels
+    (12, 180, 40),  -- Sharpie Markers
+    (13, 1200, 200), -- Bic Pens
+    (14, 450, 100), -- Crayons
+    (15, 310, 50),  -- Five Star Notebook
+    (16, 215, 50),  -- Highlighters
+    (17, 40, 15),   -- Copy Paper Case
+    (18, 95, 20),   -- HammerMill Ream
+    (19, 30, 10),   -- Colored Paper
+    (20, 5, 5),     -- Serta Chair
+    (21, 14, 5),    -- Hon Task Chair
+    (22, 9, 3),     -- Fellowes Shredder
+    (23, 11, 4),    -- File Cabinet
+    (24, 6, 2),     -- Keurig Brewer
+    (25, 150, 30),  -- K-Cup Variety
+    (26, 88, 20),   -- Clorox Wipes
+    (27, 200, 50),  -- Water 24pk
+    (28, 400, 100), -- AA Batteries
+    (29, 150, 25),  -- 9V Battery
+    (30, 18, 5);    -- Rubbermaid Trash Can
+
+INSERT INTO CUSTOMER (CUS_FNAME, CUS_LNAME, CUS_PHONE, CUS_ADDRESS, CUS_EMAIL)
+VALUES 
+    ('Michael', 'Scott', '570-555-0112', '1725 Slough Avenue, Scranton, PA', 'mscott@dundermifflin.com'),
+    ('Leslie', 'Knope', '812-555-0921', '450 City Hall Plaza, Pawnee, IN', 'lknope@pawnee.gov'),
+    ('Ron', 'Swanson', '812-555-1234', '123 Woodworking Way, Pawnee, IN', NULL),
+    ('Eleanor', 'Shellstrop', '602-555-0887', '4242 Good Place Lane, Phoenix, AZ', 'eshellstrop@arizona.com'),
+    ('Jake', 'Peralta', '718-555-0099', '1278 Prospect Park, Brooklyn, NY', 'jake.p@ny_99.gov'),
+    ('Pam', 'Beesly', '570-555-0145', '121 Art Studio Road, Scranton, PA', 'pam.halpert@artworld.com'),
+    ('Raymond', 'Holt', '718-555-1000', '196 Raymond Blvd, Brooklyn, NY', 'rholt@ny_99.gov'),
+    ('April', 'Ludgate', '812-555-6666', '666 Dark Alley, Pawnee, IN', 'april@deadpan.net'),
+    ('Chidi', 'Anagonye', '415-555-1122', '100 Ethics Circle, San Francisco, CA', 'chidi.a@university.edu'),
+    ('Rosa', 'Diaz', '718-555-9090', 'Classified Address, Brooklyn, NY', 'rosa_d@detective.org'),
+    ('Jim', 'Halpert', '570-555-0146', '1725 Slough Avenue, Scranton, PA', 'jhalpert@dundermifflin.com'),
+    ('Tom', 'Haverford', '812-555-7777', '77 Rent-A-Swag Dr, Pawnee, IN', 'tom@treatyoself.com'),
+    ('Tahani', 'Al-Jamil', '310-555-8888', '90210 Mansion Heights, Beverly Hills, CA', 'tahani@philanthropy.com'),
+    ('Amy', 'Santiago', '718-555-0199', '1278 Prospect Park, Brooklyn, NY', 'asantiago@ny_99.gov'),
+    ('Dwight', 'Schrute', '570-555-6789', '1401 Beet Farm Road, Scranton, PA', 'dschrute@schrutefarms.com'),
+    ('Terry', 'Jeffords', '718-555-2345', '88 Yogurt Lane, Brooklyn, NY', 't.jeffords@ny_99.gov'),
+    ('Donna', 'Meagle', '812-555-0001', '72 High Roller Blvd, Pawnee, IN', 'donna@meagle.com'),
+    ('Jason', 'Mendoza', '904-555-0631', '13 Jacksonville Dr, Jacksonville, FL', 'bortles_fan_1@molotov.com'),
+    ('Stanley', 'Hudson', '570-555-1144', '42 Pretzel Day Way, Scranton, PA', 'stanley.h@dundermifflin.com'),
+    ('Gina', 'Linetti', '718-555-7890', '1 Human-Form-Emoji St, Brooklyn, NY', 'gina@linettiexpress.com');
+
+INSERT INTO EMPLOYEE (EMP_FNAME, EMP_LNAME, EMP_PHONE, EMP_ADDRESS, EMP_EMAIL, EMP_HIRE_DATE, JOB_TITLE, SALARY, LAST_PROMOTION_DATE)
+VALUES 
+    ('Glenn', 'Sturgis', '314-555-0101', '521 Cloud 9 Lane, St. Louis, MO', 'gsturgis@staples-mock.com', '2015-08-15', 'Store Manager', 75000.00, '2020-01-10'),
+    ('Dina', 'Fox', '314-555-0102', '12 Bird Sanctuary Rd, St. Louis, MO', 'dfox@staples-mock.com', '2016-02-10', 'Assistant Manager', 62000.00, '2021-05-15'),
+    ('Amy', 'Sosa', '314-555-0103', '88 Progress Ave, St. Louis, MO', 'asosa@staples-mock.com', '2015-08-15', 'Floor Supervisor', 52000.00, '2022-03-01'),
+    ('Jonah', 'Simms', '314-555-0104', '42 Business School Blvd, St. Louis, MO', 'jsimms@staples-mock.com', '2018-05-20', 'Sales Associate', 38000.00, NULL),
+    ('Garrett', 'McNeill', '314-555-0105', '101 Tech Hub, St. Louis, MO', 'gmcneill@staples-mock.com', '2017-11-03', 'IT Specialist', 58000.00, '2023-09-12'),
+    ('Mateo', 'Liwanag', '314-555-0106', '77 Fashion Row, St. Louis, MO', 'mliwanag@staples-mock.com', '2018-05-20', 'Visual Merchandiser', 45000.00, '2022-11-20'),
+    ('Cheyenne', 'Thompson', '314-555-0107', '19 Young Parent Way, St. Louis, MO', 'cthompson@staples-mock.com', '2019-01-12', 'Sales Associate', 35000.00, NULL),
+    ('Sandra', 'Kaluiokalani', '314-555-0108', '99 Quiet Street, St. Louis, MO', 'skalui@staples-mock.com', '2016-06-30', 'Customer Service', 40000.00, '2023-01-05'),
+    ('Marcus', 'White', '314-555-0109', '14 BBQ Court, St. Louis, MO', 'mwhite@staples-mock.com', '2020-03-15', 'Inventory Lead', 48000.00, NULL),
+    ('Carol', 'Miller', '314-555-0110', '500 Corporate Plaza, St. Louis, MO', 'cmiller@staples-mock.com', '2014-12-01', 'District Manager', 95000.00, '2019-06-30'),
+    ('Robert', 'California', '570-555-9999', '1 CEO Drive, Scranton, PA', 'r.california@corp.com', '2021-01-15', 'CEO', 250000.00, NULL),
+    ('Angela', 'Martin', '570-555-2222', '34 Cat Lady Lane, Scranton, PA', 'amartin@staples-mock.com', '2014-03-22', 'Head Accountant', 72000.00, '2020-08-14'),
+    ('Kevin', 'Malone', '570-555-3333', '10 Chili Pot Blvd, Scranton, PA', 'kmalone@staples-mock.com', '2016-11-11', 'Junior Accountant', 42000.00, NULL),
+    ('Oscar', 'Martinez', '570-555-4444', '56 Rational Way, Scranton, PA', 'omartinez@staples-mock.com', '2015-02-28', 'Senior Accountant', 68000.00, '2021-02-10'),
+    ('Toby', 'Flenderson', '570-555-5555', '99 Boring St, Scranton, PA', 'tflenderson@staples-mock.com', '2013-09-01', 'HR Manager', 65000.00, NULL),
+    ('Kelly', 'Kapoor', '570-555-6666', '12 Pop Culture Circle, Scranton, PA', 'kkapoor@staples-mock.com', '2017-04-12', 'Customer Support', 41000.00, '2022-10-15'),
+    ('Ryan', 'Howard', '570-555-7777', '1 Wunderkind Way, Scranton, PA', 'rhoward@staples-mock.com', '2022-02-01', 'Temp', 32000.00, NULL),
+    ('Darryl', 'Philbin', '570-555-8888', '21 Warehouse Ave, Scranton, PA', 'dphilbin@staples-mock.com', '2014-06-18', 'Warehouse Manager', 68000.00, '2023-01-20'),
+    ('Phyllis', 'Vance', '570-555-1111', '45 Refrigeration Rd, Scranton, PA', 'pvance@staples-mock.com', '2013-05-05', 'Sales Rep', 55000.00, NULL),
+    ('Stanley', 'Hudson', '570-555-0000', '1 Crossword Puzzle St, Scranton, PA', 'shudson@staples-mock.com', '2012-04-01', 'Sales Rep', 56000.00, NULL),
+    ('Meredith', 'Palmer', '570-555-2424', '14 Party Supply Cir, Scranton, PA', 'mpalmer@staples-mock.com', '2015-09-30', 'Supplier Relations', 49000.00, NULL),
+    ('Creed', 'Bratton', '570-555-0606', 'Unknown Address, Scranton, PA', 'cbratton@staples-mock.com', '2011-10-31', 'Quality Assurance', 50000.00, NULL),
+    ('Jan', 'Levinson', '212-555-1212', '100 Manhattan Dr, New York, NY', 'jlevinson@corp.com', '2014-01-20', 'VP of Sales', 135000.00, '2018-04-05'),
+    ('David', 'Wallace', '212-555-8899', '15 Connecticut Ave, Greenwich, CT', 'dwallace@corp.com', '2012-08-10', 'CFO', 185000.00, '2016-11-20'),
+    ('Val', 'Torres', '570-555-3210', '22 Warehouse Ave, Scranton, PA', 'vtorres@staples-mock.com', '2020-07-07', 'Warehouse Lead', 45000.00, NULL);
+
+INSERT INTO EMPLOYEE_HISTORY (EMP_ID, JOB_TITLE, SALARY, START_DATE, END_DATE)
+VALUES 
+    (1, 'Assistant Manager', 60000.00, '2015-08-15', '2020-01-09'),
+    (2, 'Floor Lead', 45000.00, '2016-02-10', '2021-05-14'),
+    (3, 'Sales Associate', 35000.00, '2015-08-15', '2022-02-28'),
+    (5, 'Junior IT', 42000.00, '2017-11-03', '2023-09-11'),
+    (6, 'Sales Associate', 32000.00, '2018-05-20', '2022-11-19'),
+    (8, 'Sales Associate', 30000.00, '2016-06-30', '2023-01-04'),
+    (10, 'Store Manager', 80000.00, '2014-12-01', '2019-06-29'),
+    (12, 'Accountant', 55000.00, '2014-03-22', '2020-08-13'),
+    (14, 'Junior Accountant', 48000.00, '2015-02-28', '2021-02-09'),
+    (16, 'Sales Associate', 30000.00, '2017-04-12', '2022-10-14'),
+    (18, 'Warehouse Worker', 40000.00, '2014-06-18', '2023-01-19'),
+    (23, 'Regional Director', 110000.00, '2014-01-20', '2018-04-04'),
+    (24, 'VP Finance', 150000.00, '2012-08-10', '2016-11-19'),
+    (1, 'Floor Supervisor', 50000.00, '2010-01-05', '2015-08-14'),
+    (11, 'Regional Manager', 120000.00, '2019-01-01', '2021-01-14'),
+    (4, 'Trainee', 28000.00, '2018-01-01', '2018-05-19'),
+    (7, 'Stock Clerk', 25000.00, '2019-01-12', '2020-01-01'),
+    (15, 'HR Assistant', 45000.00, '2010-05-05', '2013-08-31'),
+    (19, 'Junior Sales', 40000.00, '2013-05-05', '2016-05-05'),
+    (20, 'Intern', 20000.00, '2011-04-01', '2012-03-31'),
+    (13, 'Temp', 30000.00, '2015-11-11', '2016-11-10'),
+    (9, 'Stock Clerk', 30000.00, '2019-03-15', '2020-03-14'),
+    (21, 'Purchasing Assistant', 38000.00, '2013-09-30', '2015-09-29'),
+    (25, 'Warehouse Worker', 35000.00, '2018-07-07', '2020-07-06'),
+    (17, 'Junior Temp', 25000.00, '2021-01-01', '2022-01-31'),
+    (1, 'Sales Clerk', 30000.00, '2008-01-01', '2010-01-04'),
+    (2, 'Cashier', 28000.00, '2014-01-01', '2016-02-09'),
+    (3, 'Trainee', 25000.00, '2013-01-01', '2015-08-14'),
+    (12, 'Junior Auditor', 40000.00, '2012-01-01', '2014-03-21'),
+    (18, 'Driver', 32000.00, '2012-06-18', '2014-06-17');
+
+INSERT INTO INVOICE (CUS_ID, EMP_ID, INV_DATE, INV_SUBTOTAL, INV_TAX, INV_TOTAL)
+VALUES 
+    (1, 4, '2026-04-01 10:30:00', 115.48, 8.08, 123.56),
+    (2, 4, '2026-04-01 11:15:00', 349.99, 24.50, 374.49),
+    (3, 7, '2026-04-02 09:00:00', 45.00, 3.15, 48.15),
+    (4, 7, '2026-04-02 14:20:00', 219.99, 15.40, 235.39),
+    (5, 4, '2026-04-03 16:45:00', 28.99, 2.03, 31.02),
+    (6, 16, '2026-04-03 10:00:00', 69.99, 4.90, 74.89),
+    (7, 16, '2026-04-04 11:30:00', 229.00, 16.03, 245.03),
+    (8, 4, '2026-04-04 12:00:00', 10.99, 0.77, 11.76),
+    (9, 7, '2026-04-05 13:10:00', 159.99, 11.20, 171.19),
+    (10, 16, '2026-04-05 15:55:00', 289.99, 20.30, 310.29),
+    (11, 4, '2026-04-06 09:45:00', 99.99, 7.00, 106.99),
+    (12, 7, '2026-04-06 10:20:00', 15.49, 1.08, 16.57),
+    (13, 19, '2026-04-07 14:00:00', 54.99, 3.85, 58.84),
+    (14, 19, '2026-04-07 15:30:00', 29.99, 2.10, 32.09),
+    (15, 4, '2026-04-08 11:15:00', 12.99, 0.91, 13.90),
+    (16, 7, '2026-04-08 12:45:00', 279.99, 19.60, 299.59),
+    (17, 16, '2026-04-09 09:30:00', 6.99, 0.49, 7.48),
+    (18, 4, '2026-04-09 16:00:00', 18.49, 1.29, 19.78),
+    (19, 7, '2026-04-10 10:15:00', 119.99, 8.40, 128.39),
+    (20, 16, '2026-04-10 14:30:00', 4.50, 0.32, 4.82),
+    (1, 19, '2026-04-11 11:00:00', 24.99, 1.75, 26.74),
+    (2, 4, '2026-04-11 12:20:00', 299.99, 21.00, 320.99),
+    (3, 7, '2026-04-12 13:45:00', 5.99, 0.42, 6.41),
+    (4, 16, '2026-04-12 15:10:00', 8.99, 0.63, 9.62),
+    (5, 4, '2026-04-13 09:00:00', 64.99, 4.55, 69.54),
+    (6, 7, '2026-04-13 10:50:00', 4.99, 0.35, 5.34),
+    (7, 16, '2026-04-14 11:30:00', 149.99, 10.50, 160.49),
+    (8, 19, '2026-04-14 14:20:00', 9.99, 0.70, 10.69),
+    (9, 4, '2026-04-15 16:15:00', 4.25, 0.30, 4.55),
+    (10, 7, '2026-04-15 09:30:00', 14.50, 1.02, 15.52);
+
+INSERT INTO INVOICE_LINE (INV_NUM, PROD_ID, LINE_QTY, LINE_PRICE)
+VALUES 
+    (1, 12, 10, 10.99), (1, 16, 1, 4.25), (2, 20, 1, 349.99), (3, 30, 1, 45.00),
+    (4, 1, 1, 219.99), (5, 11, 1, 28.99), (6, 4, 1, 69.99), (7, 21, 1, 229.00),
+    (8, 12, 1, 10.99), (9, 2, 1, 159.99), (10, 24, 1, 289.99), (11, 3, 1, 99.99),
+    (12, 10, 1, 15.49), (13, 17, 1, 54.99), (14, 5, 1, 29.99), (15, 26, 1, 12.99),
+    (16, 6, 1, 279.99), (17, 27, 1, 6.99), (18, 28, 1, 18.49), (19, 9, 1, 119.99),
+    (20, 14, 1, 4.50), (21, 25, 1, 24.99), (22, 22, 1, 299.99), (23, 13, 1, 5.99),
+    (24, 15, 1, 8.99), (25, 8, 1, 64.99), (26, 29, 1, 4.99), (27, 7, 1, 149.99),
+    (28, 18, 1, 9.99), (29, 16, 1, 4.25), (30, 19, 1, 14.50);
+
+INSERT INTO MARKER (PROD_ID, MRK_INK_TYPE, MRK_COLOR, MRK_TIP_STYLE)
+VALUES 
+    (40, 'Dry Erase', 'Assorted', 'Chisel'), (41, 'Permanent', 'Metallic', 'Fine'),
+    (42, 'Water-based', 'Red', 'Bullet'), (43, 'Permanent', 'Blue', 'Ultra Fine'),
+    (44, 'Dry Erase', 'Black', 'Fine'), (45, 'Permanent', 'Green', 'Chisel'),
+    (46, 'Highlighter', 'Pink', 'Chisel'), (47, 'Fabric', 'Black', 'Brush'),
+    (48, 'Oil-based', 'White', 'Medium'), (49, 'Permanent', 'Purple', 'Fine'),
+    (50, 'Dry Erase', 'Neon', 'Bullet'), (51, 'Water-based', 'Brown', 'Fine'),
+    (52, 'Permanent', 'Orange', 'Medium'), (53, 'Highlighter', 'Blue', 'Chisel'),
+    (54, 'Chalk', 'White', 'Liquid'), (55, 'Permanent', 'Silver', 'Fine'),
+    (56, 'Dry Erase', 'Red', 'Fine'), (57, 'Permanent', 'Yellow', 'Medium'),
+    (58, 'Watercolor', 'Assorted', 'Brush'), (59, 'Permanent', 'Grey', 'Ultra Fine');
+
+INSERT INTO PEN (PROD_ID, PEN_INK_COLOR, PEN_POINT_SIZE, PEN_REFILLABLE)
+VALUES 
+    (60, 'Black', '0.7mm', TRUE), (61, 'Blue', '0.5mm', FALSE),
+    (62, 'Red', '1.0mm', TRUE), (63, 'Green', '0.7mm', FALSE),
+    (64, 'Purple', '0.38mm', TRUE), (65, 'Black', '1.0mm', FALSE),
+    (66, 'Navy', '0.7mm', TRUE), (67, 'Turquoise', '0.5mm', FALSE),
+    (68, 'Burgundy', '0.7mm', TRUE), (69, 'Black', '0.5mm', TRUE),
+    (70, 'Blue', '1.0mm', FALSE), (71, 'Black', '0.7mm', TRUE),
+    (72, 'Pink', '0.5mm', FALSE), (73, 'Orange', '0.7mm', TRUE),
+    (74, 'Green', '1.0mm', FALSE), (75, 'Violet', '0.5mm', TRUE),
+    (76, 'Brown', '0.7mm', FALSE), (77, 'Black', '0.38mm', TRUE),
+    (78, 'Blue', '0.7mm', TRUE), (79, 'Red', '0.5mm', FALSE);
+
+INSERT INTO PRINTER (PROD_ID, PTR_TECH, PTR_COLOR_CAPABLE, PTR_MAX_PPM)
+VALUES 
+    (80, 'Inkjet', TRUE, 15), (81, 'Laser', TRUE, 35),
+    (82, 'Thermal', FALSE, 60), (83, 'Dot Matrix', FALSE, 5),
+    (84, 'Laser', FALSE, 40), (85, 'Inkjet', TRUE, 20),
+    (86, 'Dye Sublimation', TRUE, 1), (87, 'Laser', TRUE, 25),
+    (88, 'Inkjet', FALSE, 18), (89, 'Thermal', FALSE, 50),
+    (90, 'Laser', FALSE, 45), (91, 'Inkjet', TRUE, 12),
+    (92, '3D', TRUE, 2), (93, 'Laser', TRUE, 30),
+    (94, 'Inkjet', TRUE, 22), (95, 'Laser', FALSE, 55),
+    (96, 'Dot Matrix', FALSE, 8), (97, 'Inkjet', TRUE, 14),
+    (98, 'Laser', TRUE, 28), (99, 'Thermal', FALSE, 45);
+
+INSERT INTO PENCIL (PROD_ID, PCL_LEAD_GRADE, PCL_CASING, PCL_DIAMETER)
+VALUES 
+    (103, 'HB', 'Wood', 0.7), (104, '2B', 'Plastic', 0.5),
+    (105, '4H', 'Wood', 0.2), (106, 'B', 'Metal', 0.9),
+    (107, 'HB', 'Plastic', 0.7), (108, '6B', 'Wood', 0.8),
+    (109, 'H', 'Wood', 0.5), (110, '2H', 'Plastic', 0.3),
+    (111, 'F', 'Wood', 0.7), (112, 'HB', 'Metal', 0.5),
+    (113, 'B', 'Plastic', 0.9), (114, '4B', 'Wood', 1.0),
+    (115, 'HB', 'Wood', 0.5), (116, '2B', 'Metal', 0.7),
+    (117, 'H', 'Plastic', 0.5), (118, 'HB', 'Wood', 0.7),
+    (119, 'B', 'Wood', 0.8), (120, '2H', 'Metal', 0.3),
+    (121, 'HB', 'Plastic', 0.5), (122, '4H', 'Wood', 0.2);
+
+INSERT INTO ERASER (PROD_ID, ERS_MATERIAL, ERS_SHAPE, ERS_DUSTLESS)
+VALUES 
+    (130, 'Vinyl', 'Block', TRUE), (131, 'Rubber', 'Cap', FALSE),
+    (132, 'Gum', 'Block', FALSE), (133, 'Kneaded', 'Custom', TRUE),
+    (134, 'Vinyl', 'Pen-style', TRUE), (135, 'Rubber', 'Oval', FALSE),
+    (136, 'Polymer', 'Block', TRUE), (137, 'Rubber', 'Novelty', FALSE),
+    (138, 'Vinyl', 'Cap', TRUE), (139, 'Gum', 'Square', FALSE),
+    (140, 'Polymer', 'Block', TRUE), (141, 'Rubber', 'Block', FALSE),
+    (142, 'Kneaded', 'Custom', TRUE), (143, 'Vinyl', 'Block', TRUE),
+    (144, 'Rubber', 'Cap', FALSE), (145, 'Polymer', 'Pen-style', TRUE),
+    (146, 'Vinyl', 'Oval', TRUE), (147, 'Rubber', 'Block', FALSE),
+    (148, 'Gum', 'Block', FALSE), (149, 'Polymer', 'Cap', TRUE);
