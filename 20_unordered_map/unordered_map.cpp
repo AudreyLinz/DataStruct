@@ -17,8 +17,29 @@ public:
 
     template<typename T>
     static bool hasDuplicates(const std::vector<T>& v){
+    }
+    template<typename T>
+    static char firstNonRepeatingChar(const std::string& s){
+        std::unordered_map<char, int> freq;
+
+        for(char c : s){
+            freq[c]++;
+        }
+
+        for(char c : s){
+            if(freq[c] == 1){
+                return c;
+            }
+        }
+
+        return '\0';
 
     }
+    template<typename T>
+    static void groupStrings(const std::vector<std::string>& strings){
+
+    }
+
 private:
 
 };
