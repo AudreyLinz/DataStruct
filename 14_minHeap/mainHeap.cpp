@@ -23,7 +23,6 @@ int main(void){
     heap.insert(1);
     heap.print();
 
-
     /*
     for(int i = 0; i<10; i++){
         int num = rand()%1000;

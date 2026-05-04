@@ -117,7 +117,7 @@ int Graph<T>::shortestPath(const T& src, const T& dest) const{
         return 0;
     }
 
-    //create distances vectir
+    //create distances vector
     std::vector<int> distances(vertices.size()); //distances from source to all other nodes
     //set initial distances
     for(int i = 0; i<distances.size(); i++){
@@ -143,4 +143,42 @@ int Graph<T>::shortestPath(const T& src, const T& dest) const{
         }
     }
     return -1; //no path
+}
+
+template <typename T>
+int Graph<T>::countConnectedComponents() const {
+    // 1. Keep track of who we've seen
+    std::vector<bool> visited(vertices.size(), false);
+    int count = 0;
+
+    // 2. Iterate through every single vertex in the graph
+    for (int i = 0; i < vertices.size(); i++) {
+        
+        // 3. If we haven't visited this vertex, we've found a new "island"
+        if (!visited[i]) {
+            count++;
+            
+            // 4. Use your existing DFS helper to mark EVERY vertex 
+            // reachable from 'i' as visited.
+            DFS(i, visited); 
+        }
+    }
+
+    return count;
+}
+
+template <typename T>
+bool Graph<T>::isCompleteGraph() const {
+    int n = vertices.size();
+    if (n <= 1) return true; // Handled edge case
+
+    // Loop through every vertex's edge list
+    for (int i = 0; i < n; i++) {
+        // A vertex in a complete graph must have exactly n-1 neighbors
+        if (edges[i].size() != (n - 1)) {
+            return false; // Found someone who hasn't shaken everyone's hand!
+        }
+    }
+
+    return true; // Everyone is connected to everyone else
 }

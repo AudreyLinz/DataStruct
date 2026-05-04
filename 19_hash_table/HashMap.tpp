@@ -1,5 +1,6 @@
 #include "HashMap.hpp"
 #include <iostream>
+#include <vector>
 
 template<typename K, typename V>
 HashMap<K, V>::HashMap(int size) : n(0){
@@ -89,5 +90,35 @@ void HashMap<K, V>::remove(const K& key) {
         delete data[index];   // Free memory
         data[index] = deleted; // Mark as deleted to preserve probe chain
         n--;
+    }
+}
+
+template<typename K, typename V>
+double HashMap<K, V>::loadFactor() const{
+    if(data.empty()) {
+        return 0.0;
+    }
+    double count = 0;
+    for(int i = 0; i < data.size(); i++){
+        if(data[i]!=nullptr && data[i]!=deleted){
+            count++;
+        }
+    }
+    return count/data.size();
+}
+
+template<typename K, typename V>
+void HashMap<K, V>::rehash(int newSize) {
+    std::vector<HashNode<K, V>*> oldData = data;
+    
+    data.assign(newSize, nullptr);
+    n = 0; 
+
+    for (int i = 0; i < oldData.size(); i++) {
+        HashNode<K, V>* node = oldData[i];
+        if (node != nullptr && node != deleted) {
+            insert(node->key, node->value);
+            delete node; 
+        }
     }
 }

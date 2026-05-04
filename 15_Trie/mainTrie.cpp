@@ -1,4 +1,5 @@
 #include "Trie.hpp"
+#include "Trie.cpp"
 #include <iostream>
 
 int main(){
@@ -7,6 +8,8 @@ int main(){
     trie.insert("abc");
     trie.insert("xyz");
     trie.insert("abcd");
+
+    trie.print();
 
     std::cout << trie.search("abc") << std::endl;
     std::cout << trie.search("abd") << std::endl;

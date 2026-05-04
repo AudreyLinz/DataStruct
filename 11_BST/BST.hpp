@@ -43,6 +43,8 @@ public:
     void rotateLeftDoubleRef(BTNode<T>*& node);
     void rotateRightDoubleRef(BTNode<T>*& node); // TODO
     void balance();
+    //final practice functions:
+    T extractMax();
 
 private:
     BTNode<T>* root;

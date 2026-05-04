@@ -13,6 +13,8 @@ public:
     void insert(const T& val);
     void print() const;
     T deleteMin();
+    //finals practice
+    bool isMinHeap(const std::vector<T>& v) const;
 private:
     std::vector<T> data;
     void heapify();

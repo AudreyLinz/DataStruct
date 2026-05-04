@@ -1,8 +1,11 @@
 #include "Trie.hpp"
+#include <iostream>
 #include <string>
+
 Trie::Trie(){
     root = new TrieNode();
 }
+
 void Trie::insert(const std::string& s){
     TrieNode* cur = root;
     for(char c:s){
@@ -50,4 +53,20 @@ void Trie::print(const TrieNode* node, std::string word) const {
             print(node->children[i], word + c);
         }
     }
+}
+
+bool Trie::startsWith(const std::string& prefix) const {
+    TrieNode* cur = root;
+
+    for (char c : prefix) {
+        int i = tolower(c) - 'a';
+        
+        if (!cur->children[i]) {
+            return false;
+        }
+
+        cur = cur->children[i];
+    }
+
+    return true;
 }

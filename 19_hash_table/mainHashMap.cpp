@@ -24,5 +24,8 @@ int main(void){
         }
     }
 
+    map->print();
+    std::cout << map->loadFactor() << std::endl;
+
     return 0;
 }

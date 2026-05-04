@@ -11,7 +11,7 @@ void Sorting::selectionSort(std::vector<T>& v) {
         // TODO Find the minIndex
         for(int j = i + 1; j < size; j++){
             if(v[j] < v[minIndex]){
-                minIndex = i;
+                minIndex = j;
             }
         }
         
@@ -79,4 +79,65 @@ void Sorting::merge(std::vector<T>& v, int left, int mid, int right) {
         j++;
         k++;
     }
+}
+
+template<typename T>
+int Sorting::partition(std::vector<T>& v, int left, int right){
+    T pivot = v[right];
+    int r = left - 1;
+
+    while(left<=right){
+        //swap
+        if(v[left] > pivot &&v[r] > pivot){
+            std::swap(v[left], v[r]);
+        }
+        //move the iteratiors
+        if(v[left] <= pivot){
+            left++;
+        }
+        if(v[r] >= pivot){
+            r--;
+        }
+    }
+    std::swap(v[left], v[right]);
+    return left;
+}
+
+template<typename T>
+void Sorting::quickSort(std::vector<T>& v) {
+    if (v.size() <= 1) return;
+    quickSort(v, 0, v.size() - 1);
+}
+
+template<typename T>
+void Sorting::quickSort(std::vector<T>& v, int left, int right) {
+    if (left >= right) {
+        return;
+    }
+    int pivot_index = partition(v, left, right);
+    quickSort(v, left, pivot_index - 1);
+    quickSort(v, pivot_index + 1, right);
+    
+}
+
+template <typename T>
+int Sorting::binarySearch(const std::vector<T>& v, const T& target) {
+    int low = 0;
+    int high = v.size() - 1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (v[mid] == target) {
+            return mid;
+        } 
+        
+        if (target < v[mid]) {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    return -1; 
 }

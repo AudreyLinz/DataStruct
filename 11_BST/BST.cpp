@@ -277,16 +277,16 @@ int BST<T>::getBalance(BTNode<T>* node) const{
     }
     return getHeight(node->left) - getHeight(node->right);
 }
-/*
+
 template<typename T>
-void BST<T>::rotateRight(BTNode<T>* & node){
-    if(!node || !node->left){
+void BST<T>::rotateRight(BTNode<T>*& node) {
+    if (!node || !node->left) {
         return;
     }
     BTNode<T>* left_kid = node->left;
     node->left = left_kid->right;
     left_kid->right = node;
-    node = left_kid;
+    node = left_kid; // Update the reference to point to the new subtree root
 }
 
 template<typename T>
@@ -307,14 +307,14 @@ void BST<T>::rotateValRight(const T& val) {
 }
 
 template<typename T>
-void BST<T>::rotateLeft(BTNode<T>* & node){
-    if(!node || !node->right){
+void BST<T>::rotateLeft(BTNode<T>*& node) {
+    if (!node || !node->right) {
         return;
     }
     BTNode<T>* right_kid = node->right;
     node->right = right_kid->left;
     right_kid->left = node;
-    node = right_kid;
+    node = right_kid; // Update the reference to point to the new subtree root
 }
 
 template<typename T>
@@ -323,15 +323,14 @@ void BST<T>::rotateValLeft(const T& val) {
         rotateLeft(root);
         return;
     }
-    
 
     BTNode<T>* parent = searchParent(val);
     if (!parent) return;
 
     if (parent->left != nullptr && parent->left->data == val) {
-        rotateLeft(parent->left); // Corrected
+        rotateLeft(parent->left);
     } else if (parent->right != nullptr && parent->right->data == val) {
-        rotateLeft(parent->right); // Corrected
+        rotateLeft(parent->right);
     }
 }
 
@@ -344,7 +343,7 @@ template <typename T>
 void BST<T>::balance(BTNode<T>*& node) {
     if (!node) return;
 
-    // 1. Recursively balance subtrees first (Bottom-up approach)
+    // 1. Bottom-up approach: balance subtrees first
     balance(node->left);
     balance(node->right);
 
@@ -354,8 +353,10 @@ void BST<T>::balance(BTNode<T>*& node) {
     // 3. Left-Heavy Cases
     if (bf > 1) { 
         if (getBalance(node->left) >= 0) {
+            // Case: Left-Left (LL) -> Single Right Rotation
             rotateRight(node);
         } else {
+            // Case: Left-Right (LR) -> Double Rotation
             rotateLeft(node->left); 
             rotateRight(node);    
         }
@@ -363,34 +364,30 @@ void BST<T>::balance(BTNode<T>*& node) {
     // 4. Right-Heavy Cases
     else if (bf < -1) { 
         if (getBalance(node->right) <= 0) {
-            // Case 3: Right-Right (RR) -> Single Left Rotation
+            // Case: Right-Right (RR) -> Single Left Rotation
             rotateLeft(node);
         } else {
-            // Case 4: Right-Left (RL) -> Double Rotation
-            rotateRight(node->right); // Rotate child right
-            rotateLeft(node);         // Rotate node left
+            // Case: Right-Left (RL) -> Double Rotation
+            rotateRight(node->right); 
+            rotateLeft(node);         
         }
     }
 }
 
+// These helper functions now correctly call the existing rotation methods
 template <typename T>
 void BST<T>::rotateLeftDoubleRef(BTNode<T>*& node) {
-    if (!node || !node->right) {
-        return;
-    }
-    rotateRightRef(node->right);
-    rotateLeftRef(node);
+    if (!node || !node->right) return;
+    rotateRight(node->right);
+    rotateLeft(node);
 }
 
 template <typename T>
 void BST<T>::rotateRightDoubleRef(BTNode<T>*& node) {
-    if (!node || !node->left) {
-        return;
-    }
-    rotateRightRef(node->left);
-    rotateLeftRef(node);
+    if (!node || !node->left) return;
+    rotateLeft(node->left);
+    rotateRight(node);
 }
-    */
 
 template <typename T>
 void BST<T>::postorder() const {
@@ -424,4 +421,23 @@ void BST<T>::preorder(BTNode<T>* node) const {
     std::cout << node->data << ' ';
     preorder(node->left);
     preorder(node->right);
+}
+
+template <typename T>
+T BST<T>::extractMax(){
+    if(empty()){
+        throw std::runtime_error("empty tree");
+    }
+
+    BTNode<T>* cur = root;
+    while(cur->right != nullptr){
+        cur = cur->right;
+    }
+    
+    BTNode<T>* parent = searchParent(cur->data);
+    T temp = cur->data;
+    parent->right = nullptr;
+    std::cout << "max: " << temp << std::endl;
+    delete cur;
+    return temp;
 }

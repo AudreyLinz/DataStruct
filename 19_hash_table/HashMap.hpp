@@ -16,6 +16,8 @@ public:
 
     const V& search(const K& key) const;
     void remove(const K& key);
+    double loadFactor() const;
+    void rehash(int newSize);
 
 private:
     std::vector<HashNode<K, V>*> data;

@@ -13,6 +13,8 @@ public:
     void BFS(int start=0) const;
     int shortestPath(const T& src, const T& dest) const;
     bool isConnected() const; //yes or no disconnected
+    int countConnectedComponents() const;
+    bool isCompleteGraph() const;
     
 private:
     std::vector<T> vertices;

@@ -12,17 +12,15 @@ void print(const std::vector<T>& v) {
 
 
 int main() {
-    std::vector<std::string> strings {"xyz", "abc", "the", "dog", "cat"};
+    std::vector<std::string> strings {"xyz", "abc", "re", "the", "start", "hash", "graph", "dog", "cat"};
     std::vector<int> ints {43, 2, -2, 94, 934};
-
-    print(strings);
-    print(ints);
 
     Sorting::mergeSort(strings);
     Sorting::mergeSort(ints);
 
-    print(strings);
     print(ints);
+    //std::cout << strings[5] << strings[4] << std::endl;
+    std::cout << Sorting::binarySearch(ints, -2) << std::endl;
 
     return 0;
 }

@@ -13,6 +13,9 @@ public:
 
     void print() const;
 
+    //finals practice
+    bool startsWith(const std::string& prefix) const;
+
 private:
     TrieNode* root;
     void print(const TrieNode* node, std::string word) const;

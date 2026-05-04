@@ -110,3 +110,26 @@ void minHeap<T>::heapify(){
         percolateDown(i);
     }
 }
+
+template <typename T>
+bool minHeap<T>::isMinHeap(const std::vector<T>& v) const{
+    if(v.empty()){
+        return true;
+    }
+    int i = getLastWithKidsIndex();
+    int size = v.size();
+    while(i>=0){
+        if(getLeftKidIndex(i)<size){
+            if(v[i]>v[getLeftKidIndex(i)]){
+                return false;
+            }
+        }
+        if(getRightKidIndex(i)<size){
+            if(v[i]>v[getRightKidIndex(i)]){
+                return false;
+            }
+        }
+        i--;
+    }
+    return true;
+}
